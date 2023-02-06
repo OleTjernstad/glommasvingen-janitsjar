@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'category',
-  title: 'Kategori',
+  name: 'page',
+  title: 'Sider',
   type: 'document',
   fields: [
     defineField({
@@ -11,13 +11,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     }),
   ],
+
+  preview: {
+    select: {
+      title: 'title',
+    },
+  },
 })

@@ -2,12 +2,12 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'author',
-  title: 'Author',
+  title: 'Forfatter',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Name',
+      title: 'Navn',
       type: 'string',
     }),
     defineField({
@@ -19,32 +19,10 @@ export default defineType({
         maxLength: 96,
       },
     }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
-    }),
   ],
   preview: {
     select: {
       title: 'name',
-      media: 'image',
     },
   },
 })
