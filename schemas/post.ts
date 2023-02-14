@@ -45,6 +45,11 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Ingress',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
