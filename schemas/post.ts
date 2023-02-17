@@ -47,7 +47,7 @@ export default defineType({
     defineField({
       name: 'excerpt',
       title: 'Ingress',
-      type: 'blockContent',
+      type: 'portableText',
     }),
     defineField({
       name: 'body',
